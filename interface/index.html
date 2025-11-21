@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>prefix sum - module :CPGC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+<body>
+<div class="container py-5">
+    <div class="card shadow-sm p-4 rounded-4 border-0 pink-card">
+        <h1 class="text-center mb-3">prefix sum - module :CPGC </h1>
+        <p class="text-center mb-4">
+           Ce module calcule les somme préfixe (prefix sum) d’un tableau...
+        </p>
+        <form method="post" class="mb-3">
+            <div class="mb-3">
+                <input type="text" class="form-control form-control-lg pink-input" name="numbers"
+                       placeholder="1,2,3,4,5,6,7,8" value="{{ input_numbers }}">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-lg pink-btn">Calculer</button>
+            </div>
+        </form>
+
+        {% if up_tree %}
+        <h4 class="mt-4">🔼 Somme Parallèle</h4>
+        <div class="tree-container">
+            {% for level in up_tree|reverse %}
+                <div class="tree-level">
+                    {% for node in level %}
+                        <div class="tree-node">{{ node }}</div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if down_tree %}
+        <h4 class="mt-4">🔽 Calcule Préfixe</h4>
+        <div class="tree-container">
+            {% for level in down_tree|reverse %}
+                <div class="tree-level">
+                    {% for node in level %}
+                        <div class="tree-node">{{ node }}</div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if S %}
+        <h4 class="mt-4">Prefix Sum</h4>
+        <div class="final-sum">{{ S }}</div>
+        {% endif %}
+
+        <p class="text-center mt-4 text-muted">
+            Développée par Kezrane Margueritte IAA
+        </p>
+
+    </div>
+</div>
+</body>
+</html>

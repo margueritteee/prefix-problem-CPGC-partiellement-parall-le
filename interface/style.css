@@ -1,0 +1,57 @@
+body {
+    background-color: #ffe6f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pink-card {
+    background-color: #fff0f6;
+}
+
+.pink-input {
+    border: 2px solid #ff99cc;
+    border-radius: 10px;
+    background-color: #fff0f6;
+}
+
+.pink-btn {
+    background-color: #ff66b3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.pink-btn:hover {
+    background-color: #ff4d94;
+}
+
+.tree-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tree-level {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.tree-node {
+    background-color: #ffd6eb;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 0 8px;
+    min-width: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.final-sum {
+    background-color: #ffe0f2;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
