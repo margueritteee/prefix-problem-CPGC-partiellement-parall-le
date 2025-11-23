@@ -1,2 +1,2 @@
-﻿# prefix-problem-CPGC-partiellement-parallle
-
+simulation d’un prefix-sum parallèle, mais exécuté séquentiellement. 
+avec l'idee de pair/impair
